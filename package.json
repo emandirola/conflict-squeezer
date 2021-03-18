@@ -6,7 +6,7 @@
     "publisher": "angelomollame",
     "repository": {
         "type": "git",
-        "url": "https://github.com/angelo-mollame/conflict-squeezer"
+        "url": "https://github.com/emandirola/conflict-squeezer"
     },
     "engines": {
         "vscode": "^1.22.0"
