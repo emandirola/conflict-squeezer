@@ -27,7 +27,7 @@ export class Conflict {
             const ourLine: string = this.ourLines[topCursor];
             const theirLine: string = this.theirLines[topCursor];
 
-            if (ourLine === theirLine) {
+            if (ourLine.trim() === theirLine.trim()) {
                 topCursor++;
             } else {
                 break;
@@ -39,7 +39,7 @@ export class Conflict {
             const ourLine: string = this.ourLines[this.ourLines.length - 1 - bottomCursor];
             const theirLine: string = this.theirLines[this.theirLines.length - 1 - bottomCursor];
 
-            if (ourLine === theirLine) {
+            if (ourLine.trim() === theirLine.trim()) {
                 bottomCursor++;
             } else {
                 break;

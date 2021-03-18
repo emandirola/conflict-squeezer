@@ -293,6 +293,27 @@ function runTestsWithLineSeparator(lineSeparator: string): void {
 
             testSqueeze(inputText, expectedOutputText);
         });
+
+    runTestWithLineSeparator(
+        "white-space ignored",
+        lineSeparator,
+        () => {
+            const inputText =
+                "aaa" + lineSeparator +
+                "<<<<<<< HEAD" + lineSeparator +
+                " bbb" + lineSeparator +
+                "=======" + lineSeparator +
+                "bbb " + lineSeparator +
+                ">>>>>>> master" + lineSeparator +
+                "ccc" + lineSeparator;
+
+            const expectedOutputText =
+                "aaa" + lineSeparator +
+                " bbb" + lineSeparator +
+                "ccc" + lineSeparator;
+
+            testSqueeze(inputText, expectedOutputText);
+        });
 }
 
 function testSqueeze(inputText: string, expectedOutputText: string): void {
